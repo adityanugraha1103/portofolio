@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Aditya Nugraha - Portofolio</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            cyan: '#06b6d4',
+                            blue: '#3b82f6',
+                            dark: '#0f172a',
+                            card: '#1e293b'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-effect {
+            box-shadow: 0 0 25px -5px rgba(6, 182, 212, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-card border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                    Aditya<span class="text-white">.dev</span>
+                </a>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center space-x-6 text-sm font-medium text-slate-300">
+                    <a href="#home" class="hover:text-cyan-400 transition-colors">Home</a>
+                    <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                    <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
+                    <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
+                    <a href="#skills" class="hover:text-cyan-400 transition-colors">Skills & Certs</a>
+                    <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-card px-4 pt-2 pb-4 space-y-2 border-t border-slate-800">
+            <a href="#home" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">Home</a>
+            <a href="#about" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">About</a>
+            <a href="#experience" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">Experience</a>
+            <a href="#education" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">Education</a>
+            <a href="#skills" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">Skills & Certs</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md hover:bg-slate-800 hover:text-cyan-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-28 pb-16 flex items-center justify-center relative overflow-hidden">
+        <!-- Ambient background glows -->
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl -z-10"></div>
+        <div class="absolute bottom-1/3 right-10 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl -z-10"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+            <!-- Profile Photo -->
+            <div class="relative mb-8 group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-500"></div>
+                <img src="eae86f4f-0e1c-4ceb-bafc-5fc7c71cc49e.jpg.jpeg" 
+                     alt="Muhammad Aditya Nugraha" 
+                     onerror="this.src='https://placehold.co/300x400/1e293b/06b6d4?text=Aditya+Nugraha'"
+                     class="relative w-40 h-40 sm:w-48 sm:h-48 rounded-full object-cover border-2 border-cyan-400 shadow-2xl">
+            </div>
+
+            <span class="inline-flex items-center px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 mb-4">
+                <i class="fa-solid fa-circle text-[8px] mr-2 animate-pulse text-cyan-400"></i> Open for Opportunities
+            </span>
+
+            <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight mb-4">
+                Muhammad Aditya Nugraha
+            </h1>
+
+            <p class="text-xl sm:text-2xl text-slate-300 font-medium mb-3 max-w-2xl">
+                S1 Teknologi Informasi — <span class="text-cyan-400 font-semibold">Universitas BSI</span>
+            </p>
+
+            <div class="inline-flex items-center gap-2 bg-slate-900/80 px-4 py-1.5 rounded-lg border border-slate-800 text-sm font-semibold text-yellow-400 mb-8">
+                <i class="fa-solid fa-star"></i> IPK 3.92 / 4.00 (Cum Laude)
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="px-7 py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 shadow-lg shadow-cyan-500/20 transition-all hover:-translate-y-0.5">
+                    <i class="fa-solid fa-paper-plane mr-2"></i> Hubungi Saya
+                </a>
+                <a href="#contact" class="px-7 py-3.5 rounded-xl font-semibold glass-card border border-slate-700 text-slate-200 hover:bg-slate-800 hover:text-white transition-all hover:-translate-y-0.5">
+                    <i class="fa-solid fa-download mr-2"></i> Download CV
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-white mb-2">Tentang Saya</h2>
+                <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-12 gap-8 items-center">
+                <!-- Foto Detail -->
+                <div class="md:col-span-5 flex justify-center">
+                    <div class="glass-card p-4 rounded-2xl glow-effect w-full max-w-sm">
+                        <img src="eae86f4f-0e1c-4ceb-bafc-5fc7c71cc49e.jpg.jpeg" 
+                             alt="Muhammad Aditya Nugraha" 
+                             onerror="this.src='https://placehold.co/400x500/1e293b/06b6d4?text=Aditya+Nugraha'"
+                             class="w-full h-auto rounded-xl object-cover">
+                    </div>
+                </div>
+
+                <!-- Deskripsi Bio & Quick Stats -->
+                <div class="md:col-span-7 space-y-6">
+                    <h3 class="text-2xl font-bold text-slate-100">
+                        Lulusan Teknologi Informasi Berprestasi & Berpengalaman
+                    </h3>
+                    <p class="text-slate-300 leading-relaxed">
+                        Saya adalah seorang Sarjana Teknologi Informasi dari Universitas Bina Sarana Informatika dengan IPK 3.92/4.00. Memiliki latar belakang kuat dalam <span class="text-cyan-400 font-semibold">Software Development</span>, <span class="text-cyan-400 font-semibold">Jaringan Komputer</span>, serta pengelolaan infrastruktur TI dan basis data.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Berpengalaman magang sebagai ASO Intern di PT Telekomunikasi Indonesia (Witel Bogor), di mana saya berfokus pada pengawasan operasional perangkat jaringan serta pemeliharaan layanan telekomunikasi. Terbiasa memecahkan masalah kompleks dengan pendekatan analitis seperti Analytical Hierarchy Process (AHP).
+                    </p>
+
+                    <!-- Qualification Cards Grid -->
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 pt-4">
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <i class="fa-solid fa-graduation-cap text-cyan-400 text-2xl mb-2"></i>
+                            <div class="text-xl font-bold text-white">3.92</div>
+                            <div class="text-xs text-slate-400">IPK S1 (Cum Laude)</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center">
+                            <i class="fa-solid fa-certificate text-cyan-400 text-2xl mb-2"></i>
+                            <div class="text-xl font-bold text-white">BNSP</div>
+                            <div class="text-xs text-slate-400">Sertifikasi Programer</div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl text-center col-span-2 sm:col-span-1">
+                            <i class="fa-solid fa-language text-cyan-400 text-2xl mb-2"></i>
+                            <div class="text-xl font-bold text-white">547</div>
+                            <div class="text-xs text-slate-400">Skor TOEFL</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-2">Pengalaman Kerja</h2>
+                <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border-l-4 border-l-cyan-500 relative">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+                        <div class="flex items-center gap-4">
+                            <!-- Telkom Logo -->
+                            <div class="bg-white p-2.5 rounded-xl flex items-center justify-center w-16 h-16 shrink-0 shadow-md">
+                                <img src="1594108255409_compress_logo telkom indonesia.png" 
+                                     alt="Logo Telkom Indonesia" 
+                                     onerror="this.src='https://placehold.co/100x100/ffffff/ee2e24?text=Telkom'"
+                                     class="max-w-full max-h-full object-contain">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Access Support & Operation (ASO) Intern</h3>
+                                <p class="text-cyan-400 font-medium">PT Telekomunikasi Indonesia (Witel Bogor)</p>
+                            </div>
+                        </div>
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 w-max border border-slate-700">
+                            <i class="fa-regular fa-calendar mr-2"></i> Okt 2024 - Des 2024
+                        </span>
+                    </div>
+
+                    <!-- Experience Description -->
+                    <ul class="space-y-3 text-slate-300 text-sm sm:text-base">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-angle-right text-cyan-400 mt-1"></i>
+                            <span>Melakukan pengawasan dan pemeliharaan operasional pada jaringan akses telekomunikasi di area Bogor.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-angle-right text-cyan-400 mt-1"></i>
+                            <span>Membantu identifikasi dan trobleshoot gangguan teknis pada infrastruktur jaringan pelanggan secara cepat dan responsif.</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-angle-right text-cyan-400 mt-1"></i>
+                            <span>Menyusun laporan kinerja teknis lapangan serta mendokumentasikan pemeliharaan sistem perangkat akses.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-2">Pendidikan</h2>
+                <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-6 sm:p-8 rounded-2xl border-l-4 border-l-blue-500">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 pb-6 border-b border-slate-800">
+                        <div class="flex items-center gap-4">
+                            <!-- UBSI Logo -->
+                            <div class="bg-slate-900 p-2 rounded-xl border border-slate-700 flex items-center justify-center w-16 h-16 shrink-0 shadow-md">
+                                <img src="logo-universitas-bina-sarana-informatika-ubsi.jpg" 
+                                     alt="Logo Universitas BSI" 
+                                     onerror="this.src='https://placehold.co/100x100/1e293b/3b82f6?text=UBSI'"
+                                     class="max-w-full max-h-full object-contain rounded">
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">S1 Teknologi Informasi</h3>
+                                <p class="text-blue-400 font-medium">Universitas Bina Sarana Informatika Jakarta</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:items-end gap-1">
+                            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-slate-800 text-slate-300 w-max border border-slate-700">
+                                <i class="fa-regular fa-calendar mr-2"></i> Sep 2021 - Agu 2025
+                            </span>
+                            <span class="text-xs font-bold text-yellow-400">IPK: 3.92 / 4.00</span>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 text-slate-300 text-sm sm:text-base">
+                        <!-- Thesis Title -->
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                            <div class="text-xs uppercase font-bold text-cyan-400 tracking-wider mb-1">Judul Skripsi</div>
+                            <p class="font-semibold text-slate-200">
+                                "Strategi Pemeliharaan Alat Produksi Untuk Meningkatkan Kinerja Operasional Menggunakan Metode AHP"
+                            </p>
+                        </div>
+
+                        <!-- Bootcamp -->
+                        <div class="flex items-start gap-3">
+                            <i class="fa-solid fa-laptop-code text-cyan-400 mt-1"></i>
+                            <span><strong>Pelatihan Khusus:</strong> IT Bootcamp Software Development (Menguasai perancangan sistem modern, clean code, dan arsitektur aplikasi).</span>
+                        </div>
+
+                        <!-- Relevant Courses -->
+                        <div>
+                            <div class="font-semibold text-white mb-2">Mata Kuliah Relevan:</div>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Pemrograman Berorientasi Objek (PBO)</span>
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Rekayasa Perangkat Lunak</span>
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Jaringan Komputer & Komunikasi Data</span>
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Sistem Basis Data</span>
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Kriptografi & Keamanan Komputer</span>
+                                <span class="px-3 py-1 rounded-lg text-xs bg-slate-800 border border-slate-700 text-slate-300">Audit Teknologi Informasi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Certifications Section -->
+    <section id="skills" class="py-20 bg-slate-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-2">Keterahlian & Sertifikasi</h2>
+                <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Certifications Row -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+                <div class="glass-card p-6 rounded-xl flex items-center gap-4 border-l-4 border-l-cyan-400">
+                    <div class="w-12 h-12 rounded-full bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-award"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">Sertifikasi BNSP — Analis Program</h4>
+                        <p class="text-xs text-slate-400">Sertifikasi Kompetensi Nasional Programer / Analis Program (2025)</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-6 rounded-xl flex items-center gap-4 border-l-4 border-l-blue-400">
+                    <div class="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-language"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">TOEFL Prediction Test</h4>
+                        <p class="text-xs text-slate-400">Skor Total: <span class="text-cyan-400 font-bold">547</span> (Kemampuan Bahasa Inggris Aktif/Pasif)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skills Categories Grid -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Software Development -->
+                <div class="glass-card p-6 rounded-2xl hover:border-cyan-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl mb-4">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Software Dev</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>ReactJS / Web UI</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Node.js Backend</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>PHP Laravel Framework</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Pemrograman PBO</li>
+                    </ul>
+                </div>
+
+                <!-- Networking & Infrastructure -->
+                <div class="glass-card p-6 rounded-2xl hover:border-cyan-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 text-xl mb-4">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Networking</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Infrastruktur Jaringan</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Access Support & Ops</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Troubleshooting Jaringan</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Komunikasi Data</li>
+                    </ul>
+                </div>
+
+                <!-- Database & Analytics -->
+                <div class="glass-card p-6 rounded-2xl hover:border-cyan-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center text-purple-400 text-xl mb-4">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Data & Method</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Sistem Basis Data (SQL)</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Metode AHP (Decision)</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Analisis Kinerja Sistem</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Perancangan Database</li>
+                    </ul>
+                </div>
+
+                <!-- Tools & Security -->
+                <div class="glass-card p-6 rounded-2xl hover:border-cyan-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-400 text-xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3">Tools & Security</h3>
+                    <ul class="space-y-2 text-sm text-slate-300">
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Git / GitHub Version Control</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Kriptografi & Keamanan</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Forensik Komputer</li>
+                        <li><i class="fa-solid fa-check text-cyan-400 mr-2"></i>Audit Teknologi Informasi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-2">Kontak Saya</h2>
+                <p class="text-slate-400 text-sm">Mari terhubung untuk diskusi proyek atau kesempatan kerja</p>
+                <div class="w-16 h-1 bg-cyan-500 mx-auto rounded-full mt-3"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 items-start">
+                <!-- Info Kontak Direct -->
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">Email</div>
+                            <a href="mailto:aditya110303@gmail.com" class="text-white font-medium hover:text-cyan-400 transition-colors">
+                                aditya110303@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">Telepon / WhatsApp</div>
+                            <a href="https://wa.me/6285819472713" target="_blank" class="text-white font-medium hover:text-cyan-400 transition-colors">
+                                +62 858-1947-2713
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">Lokasi</div>
+                            <div class="text-white font-medium">Tangerang Selatan, Banten, Indonesia</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-2xl flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 text-xl shrink-0">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-slate-400">LinkedIn</div>
+                            <a href="https://linkedin.com" target="_blank" class="text-white font-medium hover:text-cyan-400 transition-colors">
+                                Muhammad Aditya Nugraha
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Form -->
+                <div class="lg:col-span-7">
+                    <form id="contact-form" class="glass-card p-8 rounded-2xl space-y-6">
+                        <h3 class="text-xl font-bold text-white mb-4">Kirim Pesan</h3>
+                        
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Nama Lengkap</label>
+                                <input type="text" required placeholder="Masukkan nama Anda" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Email</label>
+                                <input type="email" required placeholder="nama@email.com" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Subjek</label>
+                            <input type="text" required placeholder="Subjek pesan" class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cyan-500 transition-colors">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-semibold text-slate-300 uppercase mb-2">Pesan</label>
+                            <textarea rows="4" required placeholder="Tuliskan pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-slate-900 border border-slate-800 text-white focus:outline-none focus:border-cyan-500 transition-colors"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-3.5 rounded-xl font-semibold bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:from-cyan-400 hover:to-blue-500 transition-all shadow-lg shadow-cyan-500/20">
+                            <i class="fa-solid fa-paper-plane mr-2"></i> Kirim Pesan
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-sm text-slate-500">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 Muhammad Aditya Nugraha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Script -->
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on clicking link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Submit Simulation
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Terima kasih! Pesan Anda telah dikirim.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
